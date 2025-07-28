@@ -1,0 +1,362 @@
+/******************************* Navbar *******************************/
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-section img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  font-weight: bold;
+  color: #10384f;
+  background-color: #ffffff;
+  border: 1.5px solid #10384f;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.logout-btn:hover {
+  background-color: #d94f20;
+}
+
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+
+.center-card {
+  padding: 30px;
+  background-color: white;
+  min-height: 90vh;
+}
+
+/******************************* greeting *******************************/
+.header {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.header h2 {
+  font-size: 28px;
+  color: #10384f;
+  font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  background-color: #f2f7f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  padding: 30px;
+}
+
+/******************************* Sidebar Menu *******************************/
+.left-menu {
+  width: 200px;
+  background-color: #f2f7f9;
+  border-right: 1px solid #d3d3d3;
+  padding-right: 10px;
+}
+
+.tab {
+  padding: 15px 20px;
+  background-color: transparent;
+  color: #444;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  border-right: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #f1f1f1;
+}
+
+.active-tab {
+  background-color: #ffffff;
+  border-right: 4px solid #f26522;
+  color: #f26522;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+}
+
+/******************************* right content panle *******************************/
+.right-content {
+  flex: 1;
+  background-color: #f2f7f9;
+  padding: 0 30px;
+}
+
+/*******************************account box*******************************/
+.account-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: #007b8f;
+  font-weight: bold;
+}
+
+.account-header .arrow {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/******************************* account details *******************************/
+.account-details {
+  margin-top: 20px;
+  
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 14px;
+}
+
+.view-button {
+  background-color: #007b8f;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.view-button:hover {
+  background-color: #005c6d;
+}
+
+/*******************************model *******************************/
+.modal-box {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.modal-content-box {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 22px;
+  color: #10384f;
+}
+
+
+
+/******************************* modal close button *******************************/
+.close-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  background-color: #000000;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-button:hover {
+  background-color: #9ec871;
+}
+
+/*******************************modal table *******************************/
+.modal-body-box {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #333;
+}
+
+.credit {
+  color: green;
+  font-weight: bold;
+}
+
+.debit {
+  color: red;
+  font-weight: bold;
+}
+
+/******************************* transfer*******************************/
+.form {
+  max-width: 600px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-row select,
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-btn {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.send-btn {
+  background-color: #007b9e;
+  color: white;
+}
+
+#transfer {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f4f9fb;
+  margin-left: 22rem;
+}
+
+
+
+.form {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.send-btn {
+  background-color: #f26522;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.send-btn:hover {
+  background-color: #d94f20;
+}
+
+.reset-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Crystal Delta</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <!--=========================================================== Top Navbar ==================================================-->
+    <div class="top-navbar">
+      <div class="logo-section">
+        <img src="images/1000082726.png" alt="Crystal Delta Logo" />
+      </div>
+      <button id="logout-button" class="logout-btn">Logout</button>
+    </div>
+
+    <div class="center-card">
+      <div class="header">
+        <h2 id="greeting"></h2>
+        <div
+          id="transferMessage"
+          style="
+            color: #e65100;
+            font-weight: bold;
+            margin: 10px 0 20px 20px;
+            display: none;
+          "
+        ></div>
+      </div>
+
+      <div class="card-container">
+        <div class="left-menu">
+          <div class="tab active-tab" id="summaryTab">Account Summary</div>
+          <div class="tab" id="transferTab">Transfer Fund</div>
+        </div>
+        <div class="right-content">
+          <!--=========================================== Account Summary================================================ -->
+          <div
+            id="summary"
+            class="tab-content active-content"
+            style="display: block"
+          >
+            <h3>Account Summary</h3>
+
+            <div id="account-summary"></div>
+          </div>
+
+          <!--=============================================  Transfer Fund ===============================-->
+          <div id="transfer" class="tab-content" style="display: none">
+            <h3>Transfer fund</h3>
+            <form class="form">
+              <div class="form-row">
+                <label>Choose an Account</label>
+                <select id="accountselect">
+                  <option value="">—Select an account—</option>
+                  <option>SAVING - 9876543210</option>
+                  <option>CURRENT - 1234561234</option>
+                  <option>CREDIT - 2323232323</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label>Beneficiary Account</label>
+                <select id="beneficiaryselect">
+                  <option value="">—Select a Beneficiary—</option>
+                  <option>CD1001</option>
+                  <option>CD1002</option>
+                  <option>CD1003</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label>Amount in Rupees</label>
+                <input
+                  type="number"
+                  id="amountInput"
+                  placeholder="Enter amount"
+                />
+              </div>
+
+              <div class="form-row">
+                <label>Remarks</label>
+                <textarea rows="3" placeholder="Enter remarks"></textarea>
+              </div>
+
+              <div class="form-buttons">
+                <button type="reset" class="btn reset-btn">Reset</button>
+                <button type="button" class="btn send-btn" id="sendButton">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--==================================================== Statement Modal =====================================================-->
+    <div id="statement-modal" class="modal-box">
+      <div class="modal-content-box">
+        <div class="modal-header-box">
+          <h3 class="modal-title">Statement</h3>
+          <span class="close-button">×</span>
+        </div>
+        <div class="modal-body-box">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Transaction No</th>
+                <th>Credit / Debit</th>
+                <th>Closing Balance</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/helper.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/transfer.js"></script>
+    <script src="./js/load-acc.js"></script>
+    <script src="./js/account-display.js"></script>
+    <script src="./js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Delta Banking</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lilita+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@453&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="container">
+    <section class="left-side">
+      <img src="images/1000082726.png" alt="Crystal Delta Logo" class="logo">
+      <div class="welcome-text">
+        <h1>
+          Welcome to <br>
+          <span class="highlight">Crystal Delta</span><br>
+          Banking
+        </h1>
+      </div>
+    </section>
+
+    <section class="login-box">
+      <div class="login-card">
+        <h3>Login to your account</h3>
+        <form id="form" novalidate>
+          <label for="customer-id">Customer ID</label>
+          <input 
+            type="text" 
+            id="customer-id" 
+            name="customer-id" 
+            placeholder="Enter your ID" 
+            autocomplete="username" 
+           required
+          >
+          <p class="cust-id-error" style="display: none; color: red;">Please enter your Customer ID</p>
+
+          <label for="password">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="Enter your password" 
+          required
+          >
+          <p class="cust-pass-error" style="display: none; color: red;">Please enter your Password</p>
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
