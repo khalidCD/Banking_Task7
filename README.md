@@ -1,6 +1,6 @@
 # Banking Application with Node.js
 
-A secure and responsive banking web application built with Node.js, Express, and POstGreSQL that allows users to manage accounts, perform transactions, and view balances.
+A secure and responsive banking web application built with Node.js, Express, and POstGreSQL that allows users to login, perform transactions, and view account info.
 
 
 ## Tech Stack
