@@ -1,16 +1,17 @@
-const pool = require('../config/db');
+const pool = require("../config/db");
+const { getUserAccounts } = require("../models/accdb");
 
-exports.getAccountsByCustomerId = async (req, res) => {
-  const { customer_id } = req.params;
+module.exports = {
+  getAccountsByCustomerId: async (req, res) => {
+    const { customer_id } = req.params;
+    console.log(req.params)
 
-  try {
-    const result = await pool.query(
-      'SELECT a.*, c.name FROM accounts a JOIN customers c ON a.customer_id = c.customer_id WHERE a.customer_id = $1',
-      [customer_id]
-    );
+    try {
+      const result = await getUserAccounts(customer_id);
 
-    res.json(result.rows);
-  } catch (err) {
-    res.status(500).json({ error: 'Database error' });
-  }
+      res.json(result.rows);
+    } catch (err) {
+      res.status(500).json({ error: "Database error" });
+    }
+  },
 };

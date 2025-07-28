@@ -1,17 +1,15 @@
 
 require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+
 
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static('views'));
 
-const authRoutes = require('./routes/login');
-app.use('/api', authRoutes);
+const loginRoutes = require('./routes/login');
+app.use('/api', loginRoutes);
 const accountRoutes = require('./routes/account');
 app.use('/api', accountRoutes);
 

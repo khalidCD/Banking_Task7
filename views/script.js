@@ -37,7 +37,7 @@ window.onload = function () {
           customer_id: customerIdInput.value.trim(),
           password: password,
         }),
-      });
+      });//data send through json format
 
       var result = await response.json();
 
